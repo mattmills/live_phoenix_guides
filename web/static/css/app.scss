@@ -12,6 +12,13 @@ body, form, ul, table {
   margin-bottom: 20px;
 }
 
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* Phoenix flash messages */
 .alert:empty { display: none; }
 
@@ -43,7 +50,7 @@ form.link, form.button {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 900px;
   }
 }
 .container-narrow > hr {
@@ -59,6 +66,13 @@ form.link, form.button {
 /* Supporting marketing content */
 .marketing {
   margin: 35px 0;
+}
+
+.sidebar {
+  width: 150px;
+  margin-left: -151px;
+  margin-top: -40px;
+  float: left;
 }
 
 /* Responsive: Portrait tablets and up */
