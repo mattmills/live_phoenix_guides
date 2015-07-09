@@ -17,6 +17,7 @@ defmodule LiveGuides.Router do
 
     get "/", PageController, :index
     get "/:pagename", PageController, :show
+    get "/:directory/:pagename", PageController, :show
   end
 
   # Other scopes may use custom stacks.

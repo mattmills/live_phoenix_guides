@@ -6,7 +6,19 @@ defmodule LiveGuides.PageController do
   end
 
   def show(conn, params) do
-    render conn, "show.html", guide: render_file(params["pagename"]), name: params["pagename"]
+    cond do
+      params["directory"] ->
+        guide = render_file(params["directory"], params["pagename"])
+      !params["directory"] ->
+        guide = render_file(params["pagename"])
+    end
+    render conn, "show.html", guide: guide,
+                              name: params["pagename"]
+  end
+
+  def render_file(dir, page) do
+    File.read!("phoenix_guides/#{dir}/#{page}")
+    |> Earmark.to_html
   end
 
   def render_file(page) do
