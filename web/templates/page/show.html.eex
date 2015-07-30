@@ -1,4 +1,3 @@
-
 <h3><%= display_name(@name) %></h3>
 
 <%= raw(@guide) %>

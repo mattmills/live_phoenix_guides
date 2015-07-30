@@ -9,4 +9,4 @@ git clone https://github.com/phoenixframework/phoenix_guides.git
 mix phoenix.server
 ```
 
-I decided to make this when I was going on vacation, and needed something to do on the flight. I was going to do a little app in phoenix, and found out the guides didn't work offline. It's still a work in progress; only the guides on the top level are detected right now.
+I decided to make this when I was going on vacation, and needed something to do on the flight. I was going to do a little app in phoenix, and found out the guides didn't work offline. It's still a work in progress. 
