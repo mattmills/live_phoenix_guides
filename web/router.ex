@@ -16,8 +16,8 @@ defmodule LiveGuides.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/md/:pagename", PageController, :show
-    get "/md/:directory/:pagename", PageController, :show
+    get "/:pagename", PageController, :show
+    get "/:directory/:pagename", PageController, :show
   end
 
   # Other scopes may use custom stacks.

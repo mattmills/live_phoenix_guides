@@ -22,12 +22,12 @@
           <h5><%= title %> </h5>
           <ul>
             <%= for item <- list_dir("phoenix_guides") do %>
-                <li><a href='/md/<%= item %>'><%= display_name(item) %></a></li>
+                <li><a href='/<%= item %>'><%= display_name(item) %></a></li>
             <% end %>
             <%= for folder <- dir_list do %>
               <h5><%= display_name(folder) %></h5>
               <%= for item <- list_dir("phoenix_guides/#{folder}") do %>
-                  <li><a href="/md/<%= folder %>/<%= item %>"><%= display_name(item) %></a></li>
+                  <li><a href="/<%= folder %>/<%= item %>"><%= display_name(item) %></a></li>
               <% end %>
             <% end %>
           </ul>
